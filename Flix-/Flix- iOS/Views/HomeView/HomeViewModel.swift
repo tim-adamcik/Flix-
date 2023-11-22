@@ -22,7 +22,9 @@ class HomeViewModel: ObservableObject {
         
     }
     private func setUpMovies() {
-        movies["Trending Now"] = [exampleMovie1]
+        movies["Trending Now"] = exampleMovies
+        movies["Stand Up Comedy"] = exampleMovies.shuffled()
+        movies["Romance"] = exampleMovies.shuffled()
     }
     
     func getMoviesForCategory(category: String) -> [Movie] {

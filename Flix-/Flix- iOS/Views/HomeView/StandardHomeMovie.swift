@@ -13,9 +13,13 @@ struct StandardHomeMovie: View {
     var movie: Movie
     
     var body: some View {
-        KFImage(movie.thumbnailURL)
-            .resizable()
-            .scaledToFill()
+        VStack {
+            KFImage(movie.thumbnailURL)
+                .resizable()
+                .scaledToFill()
+            Text(movie.name)
+                .font(.subheadline.bold())
+        }
     }
 }
 

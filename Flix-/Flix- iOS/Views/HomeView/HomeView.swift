@@ -19,21 +19,29 @@ struct HomeView: View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
-            ForEach(vm.allCategories, id: \.self) { category in
-                VStack {
-                    HStack {
-                        Text(category)
-                        Spacer()
-                    }
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(vm.getMoviesForCategory(category: category), id: \.id) { movie in
-                                Text(movie.name)
+            // main vstack
+            ScrollView {
+                LazyVStack {
+                    ForEach(vm.allCategories, id: \.self) { category in
+                        VStack {
+                            HStack {
+                                Text(category)
+                                    .font(.largeTitle.bold())
+                                Spacer()
+                            }
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                LazyHStack {
+                                    ForEach(vm.getMoviesForCategory(category: category)) { movie in
+                                        StandardHomeMovie(movie: movie)
+                                            .frame(width: 200, height: 360)
+                                            .padding(.horizontal, 20)
+                                    }
+                                }
                             }
                         }
+                        
                     }
                 }
-                
             }
         }
         .foregroundStyle(.white)

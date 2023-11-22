@@ -26,7 +26,7 @@ struct HomeView: View {
                         VStack {
                             HStack {
                                 Text(category)
-                                    .font(.largeTitle.bold())
+                                    .font(.title3.bold())
                                 Spacer()
                             }
                             ScrollView(.horizontal, showsIndicators: false) {

@@ -6,3 +6,5 @@
 //
 
 import Foundation
+
+let exampleMovie1 = Movie(name: "Dark", thumbnailURL: URL(string: "https://picsum.photos/200/300")!)

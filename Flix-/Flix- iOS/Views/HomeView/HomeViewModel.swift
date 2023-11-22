@@ -6,3 +6,27 @@
 //
 
 import Foundation
+
+class HomeViewModel: ObservableObject {
+    @Published var movies: [String:[Movie]] = [:]
+    
+    public var allCategories: [String] {
+        movies.keys.map( {String($0)} )
+    }
+    
+    init() {
+        setUpMovies()
+    }
+    
+    func allMovies() {
+        
+    }
+    private func setUpMovies() {
+        movies["Trending Now"] = [exampleMovie1]
+    }
+    
+    func getMoviesForCategory(category: String) -> [Movie] {
+        return movies[category] ?? []
+    }
+    
+}

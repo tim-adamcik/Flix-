@@ -15,6 +15,7 @@
 		BA1E44082B0E4A7B00AAF8A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E44072B0E4A7B00AAF8A4 /* ContentView.swift */; };
 		BA1E440A2B0E4A7D00AAF8A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1E44092B0E4A7D00AAF8A4 /* Assets.xcassets */; };
 		BA1E440D2B0E4A7D00AAF8A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1E440C2B0E4A7D00AAF8A4 /* Preview Assets.xcassets */; };
+		BA4F935B2B0E576D0017049C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F935A2B0E576D0017049C /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BA1E44072B0E4A7B00AAF8A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BA1E44092B0E4A7D00AAF8A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA1E440C2B0E4A7D00AAF8A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BA4F935A2B0E576D0017049C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		BA1E43E42B0E499B00AAF8A4 /* Flix- iOS */ = {
 			isa = PBXGroup;
 			children = (
+				BA4F93582B0E57420017049C /* Views */,
 				BA1E43E52B0E499B00AAF8A4 /* Flix_App.swift */,
 				BA1E43E72B0E499B00AAF8A4 /* ContentView.swift */,
 				BA1E43E92B0E499C00AAF8A4 /* Assets.xcassets */,
@@ -110,6 +113,22 @@
 			children = (
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		BA4F93582B0E57420017049C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA4F93592B0E574D0017049C /* HomeView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BA4F93592B0E574D0017049C /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				BA4F935A2B0E576D0017049C /* HomeView.swift */,
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4F935B2B0E576D0017049C /* HomeView.swift in Sources */,
 				BA1E43E82B0E499B00AAF8A4 /* ContentView.swift in Sources */,
 				BA1E43E62B0E499B00AAF8A4 /* Flix_App.swift in Sources */,
 			);

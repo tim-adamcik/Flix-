@@ -51,7 +51,8 @@
 		BA1E43D92B0E499B00AAF8A4 = {
 			isa = PBXGroup;
 			children = (
-				BA1E43E42B0E499B00AAF8A4 /* Flix- */,
+				BA1E44112B0E532A00AAF8A4 /* Shared */,
+				BA1E43E42B0E499B00AAF8A4 /* Flix- iOS */,
 				BA1E44042B0E4A7B00AAF8A4 /* Flix- tvOS */,
 				BA1E43E32B0E499B00AAF8A4 /* Products */,
 			);
@@ -66,7 +67,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BA1E43E42B0E499B00AAF8A4 /* Flix- */ = {
+		BA1E43E42B0E499B00AAF8A4 /* Flix- iOS */ = {
 			isa = PBXGroup;
 			children = (
 				BA1E43E52B0E499B00AAF8A4 /* Flix_App.swift */,
@@ -74,7 +75,7 @@
 				BA1E43E92B0E499C00AAF8A4 /* Assets.xcassets */,
 				BA1E43EB2B0E499C00AAF8A4 /* Preview Content */,
 			);
-			path = "Flix-";
+			path = "Flix- iOS";
 			sourceTree = "<group>";
 		};
 		BA1E43EB2B0E499C00AAF8A4 /* Preview Content */ = {
@@ -102,6 +103,13 @@
 				BA1E440C2B0E4A7D00AAF8A4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BA1E44112B0E532A00AAF8A4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

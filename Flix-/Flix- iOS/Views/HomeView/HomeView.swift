@@ -11,6 +11,13 @@ struct HomeView: View {
     
     @ObservedObject private var vm: HomeViewModel
     
+    private var screen: CGRect {
+            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+                return UIScreen.main.bounds
+            }
+        return windowScene.screen.bounds
+        }
+    
     init(vm: HomeViewModel = HomeViewModel()) {
         self.vm = vm
     }
@@ -22,6 +29,9 @@ struct HomeView: View {
             // main vstack
             ScrollView {
                 LazyVStack {
+                    TopMoviePreview(movie: exampleMovie3)
+                        .frame(width: screen.width)
+                        .padding(.top, -100)
                     ForEach(vm.allCategories, id: \.self) { category in
                         VStack {
                             HStack {
@@ -33,8 +43,8 @@ struct HomeView: View {
                                 LazyHStack {
                                     ForEach(vm.getMoviesForCategory(category: category)) { movie in
                                         StandardHomeMovie(movie: movie)
-                                            .frame(width: 200, height: 360)
-                                            .padding(.horizontal, 20)
+                                            .frame(width: 200, height: 340)
+                                            .padding(.horizontal, 5)
                                     }
                                 }
                             }

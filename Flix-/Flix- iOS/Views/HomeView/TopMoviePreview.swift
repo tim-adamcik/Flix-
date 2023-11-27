@@ -17,6 +17,7 @@ struct TopMoviePreview: View {
                 .resizable()
                 .scaledToFill()
                 .clipped()
+            LinearGradient(stops: [Gradient.Stop(color: .clear, location: 0.65), Gradient.Stop(color: .black, location: 0.95)], startPoint: .top, endPoint: .bottom)
             VStack {
                 Spacer()
                 HStack {
@@ -32,10 +33,19 @@ struct TopMoviePreview: View {
                         }
                     }
                 }
-                HStack {
-                    Text("My List")
-                    Text("Play Button")
-                    Text("Info")
+                HStack(spacing: 60) {
+                    SmallVerticalButton(text: "My List", onImage: "checkmark", offImage: "plus", isOn: false) {
+                        // my list action
+                    }
+                    SmallHorizontalButton(text: "Play", image: "play.fill", backgroundColor: .white, foregroundColor: .black) {
+                        // play action
+                    }
+                    .frame(width: 160, height: 40)
+
+                    SmallVerticalButton(text: "Info", onImage: "info.circle", offImage: "info.circle", isOn: true) {
+                        // info action
+                    }
+                    
                 }
             }
         }

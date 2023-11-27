@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA01ECA02B14F87E00BD389D /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA01EC9F2B14F87E00BD389D /* TopMoviePreview.swift */; };
+		BA01ECA32B14FE2500BD389D /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA01ECA22B14FE2500BD389D /* SmallVerticalButton.swift */; };
 		BA1E43E62B0E499B00AAF8A4 /* Flix_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E43E52B0E499B00AAF8A4 /* Flix_App.swift */; };
 		BA1E43E82B0E499B00AAF8A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E43E72B0E499B00AAF8A4 /* ContentView.swift */; };
 		BA1E43EA2B0E499C00AAF8A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1E43E92B0E499C00AAF8A4 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA01EC9F2B14F87E00BD389D /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
+		BA01ECA22B14FE2500BD389D /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
 		BA1E43E22B0E499B00AAF8A4 /* Flix-.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flix-.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA1E43E52B0E499B00AAF8A4 /* Flix_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flix_App.swift; sourceTree = "<group>"; };
 		BA1E43E72B0E499B00AAF8A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA01ECA12B14FE0800BD389D /* MiscellaneousViews */ = {
+			isa = PBXGroup;
+			children = (
+				BA01ECA22B14FE2500BD389D /* SmallVerticalButton.swift */,
+			);
+			path = MiscellaneousViews;
+			sourceTree = "<group>";
+		};
 		BA1E43D92B0E499B00AAF8A4 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +143,7 @@
 		BA4F93582B0E57420017049C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BA01ECA12B14FE0800BD389D /* MiscellaneousViews */,
 				BA4F93592B0E574D0017049C /* HomeView */,
 			);
 			path = Views;
@@ -142,6 +155,7 @@
 				BA4F935A2B0E576D0017049C /* HomeView.swift */,
 				BA4F93682B0E5F5C0017049C /* HomeViewModel.swift */,
 				BA4F93632B0E5C0D0017049C /* StandardHomeMovie.swift */,
+				BA01EC9F2B14F87E00BD389D /* TopMoviePreview.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -265,8 +279,10 @@
 				BA4F93692B0E5F5C0017049C /* HomeViewModel.swift in Sources */,
 				BA1E43E82B0E499B00AAF8A4 /* ContentView.swift in Sources */,
 				BA4F93642B0E5C0D0017049C /* StandardHomeMovie.swift in Sources */,
+				BA01ECA02B14F87E00BD389D /* TopMoviePreview.swift in Sources */,
 				BA4F93622B0E59FE0017049C /* Movie.swift in Sources */,
 				BA1E43E62B0E499B00AAF8A4 /* Flix_App.swift in Sources */,
+				BA01ECA32B14FE2500BD389D /* SmallVerticalButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,16 @@ import SwiftUI
 
 struct HDView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Rectangle()
+                .fill(.clear)
+                .stroke(.gray ,lineWidth: 2)
+                .frame(width: 40, height: 20)
+            Text("HD")
+                .foregroundStyle(.gray)
+                .bold()
+                .padding()
+        }
     }
 }
 

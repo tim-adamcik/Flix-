@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct RatingView: View {
+    
+    var rating: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+           Rectangle()
+                .foregroundStyle(.gray)
+            Text(rating)
+                .foregroundStyle(.white)
+                .font(.system(size: 12))
+                .bold()
+        }
+        .frame(width: 50, height: 20)
     }
 }
 
+
 #Preview {
-    RatingView()
+    RatingView(rating: "TV-MA")
 }

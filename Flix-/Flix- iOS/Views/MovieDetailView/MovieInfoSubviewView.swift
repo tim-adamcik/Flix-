@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct MovieInfoSubviewView: View {
+    
+    var movie: Movie
+    @State var seasonSelection: Int = 1
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(spacing: 20) {
+            Image(systemName: "hand.thumbsup.fill")
+                .foregroundStyle(.white)
+            Text(String(movie.year))
+            RatingView(rating: movie.rating)
+            Text(movie.numberOfSeasonsDisplay)
+            HDView()
+        }
+        .foregroundStyle(.gray)
     }
 }
 
 #Preview {
-    MovieInfoSubviewView()
+    ZStack {
+        Color.black
+        MovieInfoSubviewView(movie: exampleMovie7)
+    }
 }
+

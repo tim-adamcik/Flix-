@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject private var vm: HomeViewModel
+    @State private var movieDetailToShow: Movie? = nil
     
     private var screen: CGRect {
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
@@ -50,6 +51,9 @@ struct HomeView: View {
                                         StandardHomeMovie(movie: movie)
                                             .frame(width: 200, height: 340)
                                             .padding(.horizontal, 5)
+                                            .onTapGesture {
+                                                movieDetailToShow = movie
+                                            }
                                     }
                                 }
                             }
@@ -57,6 +61,12 @@ struct HomeView: View {
                         
                     }
                 }
+            }
+            
+            if movieDetailToShow != nil {
+                MovieDetailView(movie: movieDetailToShow!, movieDetailToShow: $movieDetailToShow)
+                    .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/, value: 1.0)
+                    .transition(.opacity)
             }
         }
         .foregroundStyle(.white)

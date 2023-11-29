@@ -13,6 +13,7 @@ struct MovieDetailView: View {
     @State var seasonSelection: Int = 1
     @State private var showSeasonPicker = false
     @State private var selectedSeason = 1
+    @Binding var movieDetailToShow: Movie?
     
     private var screen: CGRect {
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
@@ -31,7 +32,7 @@ struct MovieDetailView: View {
                     HStack {
                         Spacer()
                         Button {
-                            // close the view
+                            movieDetailToShow = nil
                         } label: {
                             Image(systemName: "xmark.circle")
                                 .font(.system(size: 28))
@@ -120,5 +121,5 @@ struct MovieDetailView: View {
 }
 
 #Preview {
-    MovieDetailView(movie: exampleMovie5)
+    MovieDetailView(movie: exampleMovie5, movieDetailToShow: .constant(nil))
 }

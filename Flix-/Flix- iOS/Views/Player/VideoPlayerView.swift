@@ -1,5 +1,5 @@
 //
-//  VideoView.swift
+//  VideoPlayerView.swift
 //  Flix-
 //
 //  Created by Timothy Adamcik on 11/29/23.

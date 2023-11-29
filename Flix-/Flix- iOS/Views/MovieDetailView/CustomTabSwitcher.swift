@@ -20,6 +20,9 @@ struct CustomTabSwitcher: View {
     var tabs: [CustomTabs]
     var movie: Movie
     
+    @Binding var selectedSeason: Int
+    @Binding var showSeasonPicker: Bool
+    
     func widthForTab(_ tab: CustomTabs) -> CGFloat {
         return tab.rawValue.widthOfString(usingFont: .systemFont(ofSize: 16, weight: .bold))
     }
@@ -51,15 +54,15 @@ struct CustomTabSwitcher: View {
             
             switch selectedTab {
             case .episodes:
-                Text("eppys")
+                EpisodesView(episodes: movie.episodes ?? [], showSeasonPicker: $showSeasonPicker, selectedSeason: $selectedSeason)
             case .trailers:
-                Text("tray tray")
+                TrailersAndMoreView(trailers: movie.trailers)
+                
             case .more:
                 MovieGridView(movies: movie.moreLikeThisMovies)
             case .related:
                 Text("rellllated")
             }
-            Text("Selected tab = \(selectedTab.rawValue)")
         }
         .foregroundStyle(.white)
     }
@@ -69,7 +72,7 @@ struct CustomTabSwitcher: View {
     ZStack {
         Color.black
             .ignoresSafeArea()
-        CustomTabSwitcher(tabs: [.episodes,.trailers, .more], movie: exampleMovie1)
+        CustomTabSwitcher(tabs: [.episodes,.trailers, .more], movie: exampleMovie1,selectedSeason: .constant(1), showSeasonPicker: .constant(false))
     }
     
 }

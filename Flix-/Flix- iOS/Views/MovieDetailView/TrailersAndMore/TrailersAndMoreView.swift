@@ -8,11 +8,38 @@
 import SwiftUI
 
 struct TrailersAndMoreView: View {
+    
+    var trailers: [Trailer]
+    private var screen: CGRect {
+            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+                return UIScreen.main.bounds
+            }
+        return windowScene.screen.bounds
+        }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            VStack {
+                ForEach(trailers) { trailer in
+                    
+                    VStack(alignment: .leading) {
+                        VideoPreviewImage(imageURL: trailer.thumbnailImageURL, videoURL: trailer.videoURL)
+                            .frame(maxWidth: screen.width)
+                        
+                            Text(trailer.name)
+                                .font(.headline)
+                                .bold()
+                    }
+                }
+                .padding(.bottom, 10)
+            }
+            .padding()
     }
 }
 
 #Preview {
-    TrailersAndMoreView()
+    ZStack {
+        Color.black
+        TrailersAndMoreView(trailers: exampleTrailers)
+    }
+    .foregroundStyle(.white)
 }

@@ -6,13 +6,35 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct VideoPreviewImage: View {
+    
+    var imageURL: URL
+    var videoURL: URL
+    
+    @State private var showingVideoPlayer: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            KFImage(imageURL)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+            Button {
+                showingVideoPlayer = true
+            } label: {
+                Image(systemName: "play.circle")
+                    .foregroundStyle(.white)
+                    .font(.system(size: 40))
+            }
+            
+        }
+        .sheet(isPresented: $showingVideoPlayer, content: {
+            VideoPlayerView(url: videoURL)
+        })
     }
 }
 
 #Preview {
-    VideoPreviewImage()
+    VideoPreviewImage(imageURL: exampleImageURL, videoURL: exampleVideoURL)
 }

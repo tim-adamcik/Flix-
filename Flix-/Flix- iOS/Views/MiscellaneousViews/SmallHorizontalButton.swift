@@ -30,6 +30,7 @@ struct SmallHorizontalButton: View {
                     Text(text)
                         .font(.system(size: 18))
                         .bold()
+                        .padding(.vertical, 8)
                     Spacer()
                 }
                 .foregroundStyle(foregroundColor)

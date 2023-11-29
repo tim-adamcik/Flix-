@@ -53,13 +53,31 @@ struct MovieDetailView: View {
                         CurrentEpisodeInformationView(movie: movie)
                         CastInfoView(movie: movie)
                         
+                        HStack(spacing: 60) {
+                            SmallVerticalButton(text: "My List", onImage: "checkmark", offImage: "plus", isOn: true) {
+                                //
+                            }
+                            SmallVerticalButton(text: "Rate", onImage: "hand.thumbsup.fill", offImage: "hand.thumbsdown.fill", isOn: true) {
+                                //
+                            }
+                            SmallVerticalButton(text: "Share", onImage: "square.and.arrow.up", offImage: "square.and.arrow.up", isOn: true) {
+                                //
+                            }
+                            Spacer()
+                            
+                        }
+                        .padding(.leading, 20)
+
+                        CustomTabSwitcher(tabs: [.episodes,.trailers,.more], movie: movie)
+
+                        
                     }
                     .padding(.horizontal, 8)
                 }
+                
                 Spacer()
-                SmallVerticalButton(text: "Like", onImage: "hand.thumbsup.fill", offImage: "hand.thumbsdown.fill", isOn: true) {
-                    //
-                }
+                Spacer()
+                
                 if movie.numberOfSeasons != nil {
                     Picker(selection: $seasonSelection) {
                         ForEach(0..<movie.numberOfSeasons!, id: \.self) { season in

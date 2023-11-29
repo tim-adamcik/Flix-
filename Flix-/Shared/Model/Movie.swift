@@ -25,6 +25,7 @@ struct Movie: Identifiable {
     var cast: String
     
     var moreLikeThisMovies: [Movie]
+    var trailers: [Trailer]
     
     var episodes: [Episode]?
     var promotionalHeadline: String?

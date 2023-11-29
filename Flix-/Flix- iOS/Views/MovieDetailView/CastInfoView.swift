@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct CastInfoView: View {
+    var movie: Movie
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 3) {
+            HStack {
+                Text("Cast: \(movie.cast)")
+                Spacer()
+            }
+            HStack {
+                Text("Creators: \(movie.creators)")
+                Spacer()
+            }
+        }
+        .font(.caption)
+        .foregroundStyle(.gray)
+        .padding(.vertical, 10)
     }
 }
 
 #Preview {
-    CastInfoView()
+    CastInfoView(movie: exampleMovie6)
 }

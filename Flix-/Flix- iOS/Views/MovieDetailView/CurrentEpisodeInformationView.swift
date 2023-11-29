@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct CurrentEpisodeInformationView: View {
+    var movie: Movie
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Group {
+            HStack {
+                Text(movie.episodeInfoDisplay)
+                    .bold()
+                Spacer()
+            }
+            HStack {
+                Text(movie.episodeDescriptionDisplay)
+                    .bold()
+                    .font(.subheadline)
+                Spacer()
+            }
+        }
     }
 }
 
 #Preview {
-    CurrentEpisodeInformationView()
+    CurrentEpisodeInformationView(movie: exampleMovie6)
 }

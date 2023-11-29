@@ -47,7 +47,14 @@ struct MovieDetailView: View {
                                 .font(.headline)
                                 .bold()
                         }
+                        SmallHorizontalButton(text: "Play", image: "play.fill", backgroundColor: .red, foregroundColor: .white) {
+                            // play movie
+                        }
+                        CurrentEpisodeInformationView(movie: movie)
+                        CastInfoView(movie: movie)
+                        
                     }
+                    .padding(.horizontal, 8)
                 }
                 Spacer()
                 SmallVerticalButton(text: "Like", onImage: "hand.thumbsup.fill", offImage: "hand.thumbsdown.fill", isOn: true) {

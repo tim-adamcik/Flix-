@@ -32,6 +32,8 @@
 		BA7BE1732B167D800077B608 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE1712B167D800077B608 /* Episode.swift */; };
 		BA7BE1752B167F140077B608 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE1742B167F140077B608 /* RatingView.swift */; };
 		BA7BE1782B167F490077B608 /* HDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE1772B167F490077B608 /* HDView.swift */; };
+		BA7BE17A2B179C0B0077B608 /* CastInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE1792B179C0B0077B608 /* CastInfoView.swift */; };
+		BA7BE17C2B179C460077B608 /* CurrentEpisodeInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE17B2B179C460077B608 /* CurrentEpisodeInformationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		BA7BE1712B167D800077B608 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		BA7BE1742B167F140077B608 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		BA7BE1772B167F490077B608 /* HDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDView.swift; sourceTree = "<group>"; };
+		BA7BE1792B179C0B0077B608 /* CastInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastInfoView.swift; sourceTree = "<group>"; };
+		BA7BE17B2B179C460077B608 /* CurrentEpisodeInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEpisodeInformationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,8 @@
 			children = (
 				BA7BE16D2B165CA60077B608 /* MovieDetailView.swift */,
 				BA7BE16F2B16710C0077B608 /* MovieInfoSubviewView.swift */,
+				BA7BE1792B179C0B0077B608 /* CastInfoView.swift */,
+				BA7BE17B2B179C460077B608 /* CurrentEpisodeInformationView.swift */,
 			);
 			path = MovieDetailView;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 				BA1E43E82B0E499B00AAF8A4 /* ContentView.swift in Sources */,
 				BA4F93642B0E5C0D0017049C /* StandardHomeMovie.swift in Sources */,
 				BA7BE16E2B165CA60077B608 /* MovieDetailView.swift in Sources */,
+				BA7BE17A2B179C0B0077B608 /* CastInfoView.swift in Sources */,
 				BA7BE1702B16710C0077B608 /* MovieInfoSubviewView.swift in Sources */,
 				BA01ECA02B14F87E00BD389D /* TopMoviePreview.swift in Sources */,
 				BA7BE1722B167D800077B608 /* Episode.swift in Sources */,
@@ -320,6 +327,7 @@
 				BA1E43E62B0E499B00AAF8A4 /* Flix_App.swift in Sources */,
 				BA7BE1782B167F490077B608 /* HDView.swift in Sources */,
 				BA01ECA32B14FE2500BD389D /* SmallVerticalButton.swift in Sources */,
+				BA7BE17C2B179C460077B608 /* CurrentEpisodeInformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

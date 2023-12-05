@@ -46,28 +46,7 @@ struct HomeView: View {
                         .frame(width: screen.width)
                         .padding(.top, -100)
                         .zIndex(-1)
-                    ForEach(vm.allCategories, id: \.self) { category in
-                        VStack {
-                            HStack {
-                                Text(category)
-                                    .font(.title3.bold())
-                                Spacer()
-                            }
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                LazyHStack {
-                                    ForEach(vm.getMoviesForCategory(category: category)) { movie in
-                                        StandardHomeMovie(movie: movie)
-                                            .frame(width: 200, height: 340)
-                                            .padding(.horizontal, 5)
-                                            .onTapGesture {
-                                                movieDetailToShow = movie
-                                            }
-                                    }
-                                }
-                            }
-                        }
-                        
-                    }
+                    HomeStack(vm: vm, movieDetailToShow: $movieDetailToShow, homeGenre: homeGenre, topRowSelection: topRowSelection)
                 }
             }
             
@@ -84,4 +63,19 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+}
+
+enum HomeTopRow: String, CaseIterable {
+    case home = "Home"
+    case tvShows = "TV Shows"
+    case movies = "Movies"
+    case myList = "My List"
+}
+
+enum HomeGenre: String {
+    case AllGenres = "All Genres"
+    case Action
+    case Comedy
+    case Horror
+    case Thriller
 }

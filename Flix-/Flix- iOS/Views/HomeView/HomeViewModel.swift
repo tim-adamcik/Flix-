@@ -30,8 +30,21 @@ class HomeViewModel: ObservableObject {
         movies["My List"] = exampleMovies.shuffled()
     }
     
-    func getMoviesForCategory(category: String) -> [Movie] {
-        return movies[category] ?? []
+    func getMoviesForCategory(forCategory category: String, andHomeRow homeRow: HomeTopRow) -> [Movie] {
+        
+        switch homeRow {
+        case .home:
+            return movies[category] ?? []
+        case .movies:
+            let moviesForCategory = movies[category] ?? []
+            return moviesForCategory.filter { $0.mediaType == .movie }
+        case .tvShows:
+            let tvShowsForCategory = movies[category] ?? []
+            return tvShowsForCategory.filter { $0.mediaType == .tvShow }
+        case .myList:
+            return movies[category] ?? []
+        }
+        
     }
     
 }

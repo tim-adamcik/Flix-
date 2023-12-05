@@ -12,6 +12,13 @@ struct HomeView: View {
     @ObservedObject private var vm: HomeViewModel
     @State private var movieDetailToShow: Movie? = nil
     
+    @State private var topRowSelection: HomeTopRow = .home
+    @State private var homeGenre: HomeGenre = .AllGenres
+    
+    @State private var showTopRowSelection = false
+    @State private var showGenreSelection: Bool = false
+    
+    
     private var screen: CGRect {
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
                 return UIScreen.main.bounds
@@ -30,8 +37,9 @@ struct HomeView: View {
             // main vstack
             ScrollView {
                 LazyVStack {
-                    TopRowButtons() {
+                    TopRowButtons(topRowSelection: $topRowSelection, homeGenre: $homeGenre, showGenreSelection: $showGenreSelection, showTopRowSelection: $showTopRowSelection) {
                         //
+                        
                     }
 
                     TopMoviePreview(movie: exampleMovie3)

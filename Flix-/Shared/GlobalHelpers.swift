@@ -82,7 +82,7 @@ let exampleMovie5 = Movie(
     name: "After Life",
     thumbnailURL: URL(string: "https://picsum.photos/200/304")!,
     categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi", "Thriller"],
-    year: 2020,
+    genre: .Horror, year: 2020,
     rating: "TV-MA",
     numberOfSeasons: 4,
     defaultEpisodeInfo: exampleEpisodeInfo1,

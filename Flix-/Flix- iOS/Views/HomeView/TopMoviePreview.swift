@@ -45,8 +45,8 @@ struct TopMoviePreview: View {
                     SmallVerticalButton(text: "Info", onImage: "info.circle", offImage: "info.circle", isOn: true) {
                         // info action
                     }
-                    
                 }
+                .padding(.vertical, 15)
             }
         }
         .foregroundStyle(.white)

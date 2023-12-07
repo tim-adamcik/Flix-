@@ -9,25 +9,45 @@ import SwiftUI
 
 struct ContentView: View {
     
+    init() {
+        UITabBar.appearance().isTranslucent = false
+        UITabBar.appearance().barTintColor = .black
+    }
+    
     @State private var text: String = "DADDY"
     
     var body: some View {
-        VStack {
-            Spacer()
-            Image(systemName: "heart.fill")
-                .foregroundColor(.red)
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("ADA ADAMCIK")
-                .font(.largeTitle)
-                .foregroundStyle(.red)
-            Text("Loves")
-            Text(text)
-                .font(.largeTitle)
-                .foregroundStyle(.green)
+        
+        TabView {
+            HomeView()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }.tag(0)
             
+            Text("Second")
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
+                }.tag(1)
+            Text("Third")
+                .tabItem {
+                    Image(systemName: "play.rectangle")
+                    Text("Coming Soon")
+                }.tag(2)
+            Text("Fourth")
+                .tabItem {
+                    Image(systemName: "arrow.down.to.line.alt")
+                    Text("Download")
+                }.tag(3)
+            Text("Fifth")
+                .tabItem {
+                    Image(systemName: "figure.table.tennis")
+                    Text("Home")
+                }.tag(4)
         }
-        .padding()
+        .background(.black)
+        .tint(.white)
     }
 
 }

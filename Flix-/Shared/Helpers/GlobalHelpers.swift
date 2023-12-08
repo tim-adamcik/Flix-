@@ -17,7 +17,7 @@ let exampleEpisodes = [exampleEpisode, exampleEpisode2, exampleEpisode3, example
 
 
 
-let exampleVideoURL: URL = URL(string: "https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4")!
+let exampleVideoURL: URL = URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")!
 let exampleImageURL: URL = URL(string: "https://picsum.photos/200/105")!
 let exampleImageURL2: URL = URL(string: "https://picsum.photos/200/106")!
 let exampleImageURL3: URL = URL(string: "https://picsum.photos/200/107")!

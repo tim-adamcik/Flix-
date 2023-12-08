@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SearchBarView: View {
     
-    @State private var text: String = ""
-    
+    @Binding var text: String
+    @State private var isEditing: Bool = true
+    @Binding var isLoading: Bool
     
     var body: some View {
         
@@ -28,23 +29,49 @@ struct SearchBarView: View {
                     .background(.graySearchBackground)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                     .foregroundStyle(.white)
-                
-                Button {
-                    // Clear textfield
-                } label: {
-                    Image(systemName: "xmark.circle.fill")
-                        .foregroundStyle(.graySearchText)
+                    .onTapGesture(perform: {
+                        isEditing = true
+                    })
+                if !text.isEmpty {
+                    if isLoading {
+                        Button {
+                            // Clear textfield
+                            text = String()
+                        } label: {
+                            ActivityIndicator(style: .medium, animate: .constant(true))
+                                .configure {
+                                    $0.color = .white
+                                }
+                        }
+                        .padding(.trailing, 36)
                         .frame(width: 35, height: 35)
+                        
+                    } else {
+                        Button {
+                            // Clear textfield
+                            text = String()
+                        } label: {
+                            Image(systemName: "xmark.circle.fill")
+                                .foregroundStyle(.graySearchText)
+                                .frame(width: 35, height: 35)
+                        }
+                        .padding(.trailing, 18)
+                    }
                 }
-                .padding(.trailing, 18)
                 
-                Button {
-                    // clear text, hide both buttons, give up first responder
-                } label: {
-                    Text("Cancel")
-                        .foregroundStyle(.white)
+                if isEditing {
+                    Button {
+                        // clear text, hide both buttons, give up first responder
+                        text = String()
+                        isEditing = false
+                        hideKeyboard()
+                    } label: {
+                        Text("Cancel")
+                            .foregroundStyle(.white)
+                    }
+                    .padding(.trailing, 10)
                 }
-                .padding(.trailing, 10)
+                
             }
         }
     }
@@ -53,7 +80,7 @@ struct SearchBarView: View {
 #Preview {
     ZStack {
         Color.black
-        SearchBarView()
+        SearchBarView(text: .constant(""), isLoading: .constant(false))
             .padding()
 
     }

@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct SearchView: View {
+    
+    @State private var text: String = ""
+    @State private var isLoading: Bool = false
+    
+    
     var body: some View {
         ZStack {
             Color.black
@@ -15,13 +20,7 @@ struct SearchView: View {
             
             VStack(alignment: .leading) {
                 HStack {
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                        Text("Search bar")
-                    }
-                        
-                        Spacer()
-                    Text("Cancel")
+                    SearchBarView(text: $text, isLoading: $isLoading)
                 }
                 
                 ScrollView() {

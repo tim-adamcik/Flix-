@@ -12,41 +12,70 @@ struct SearchView: View {
     @State private var text: String = ""
     @ObservedObject var viewModel: SearchViewModel = SearchViewModel()
     
+    @State private var movieDetailToShow: Movie? = nil
+    
     
     var body: some View {
-        ZStack {
+        let searchTextBinding = Binding {
+            return text
+        } set: {
+            text = $0
+            viewModel.updateSearchText(with: $0)
+        }
+        
+        return ZStack {
             Color.black
                 .ignoresSafeArea()
             
-            VStack(alignment: .leading) {
+            VStack {
                 HStack {
-                    SearchBarView(text: $text, isLoading: $viewModel.isLoading)
+                    SearchBarView(text: searchTextBinding, isLoading: $viewModel.isLoading)
                 }
                 
                 ScrollView() {
-                    HStack {
-                        Text("Popular movies")
-                            .font(.title)
-                            .bold()
-                        Spacer()
-                    }
-                    VStack {
-                        ForEach(0..<10) {_ in 
-                            HStack {
-                                Image(systemName: "play.fill")
-                                    .font(.largeTitle)
-                                    .padding(.horizontal, 20)
-                                Text("Movie")
-                                    .font(.system(size: 30.0))
-                                    .padding(.leading, 10)
-                                Spacer()
-                                Image(systemName: "triangle.fill")
-                                    .rotationEffect(.degrees(90))
+                    
+                    if viewModel.isShowingPopularMovies {
+                        HStack {
+                            Text("Popular movies")
+                                .font(.title)
+                                .bold()
+                                .padding(.leading, 12)
+                            Spacer()
+                        }
+                        LazyVStack {
+                            ForEach(viewModel.popularMovies, id: \.id) { movie in
+                                SearchPopularMoviesView(movie: movie, movieDetailToShow: $movieDetailToShow)
+                                    .frame(height: 75)
                             }
                         }
+                    } else {
+                        switch viewModel.viewState {
+                        case .empty:
+                            Text("Your search did not have any results")
+                                .bold()
+                                .padding(.top, 150)
+                        case .loading:
+                            Text("Loading")
+                        case .loaded:
+                            VStack {
+                                HStack {
+                                    Text("Movies & TV")
+                                        .bold()
+                                        .font(.title3)
+                                        .padding(.leading, 12)
+                                    Spacer()
+                                }
+                                SearchResultsView(movies: viewModel.searchResultMovies, movieDetailToShow: $movieDetailToShow)
+                            }
+                        case .error:
+                            Text("error")
+                        }
                     }
+                    
                 }
-                Spacer()
+            }
+            if movieDetailToShow != nil {
+                MovieDetailView(movie: movieDetailToShow!, movieDetailToShow: $movieDetailToShow)
             }
         }
         .foregroundStyle(.white)

@@ -10,7 +10,7 @@ import SwiftUI
 struct SearchView: View {
     
     @State private var text: String = ""
-    @State private var isLoading: Bool = false
+    @ObservedObject var viewModel: SearchViewModel = SearchViewModel()
     
     
     var body: some View {
@@ -20,7 +20,7 @@ struct SearchView: View {
             
             VStack(alignment: .leading) {
                 HStack {
-                    SearchBarView(text: $text, isLoading: $isLoading)
+                    SearchBarView(text: $text, isLoading: $viewModel.isLoading)
                 }
                 
                 ScrollView() {

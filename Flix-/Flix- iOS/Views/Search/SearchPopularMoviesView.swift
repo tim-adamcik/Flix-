@@ -6,13 +6,46 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct SearchPopularMoviesView: View {
+    
+    var movie: Movie
+    @Binding var movieDetailToShow: Movie?
+        
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { proxy in
+            HStack {
+                KFImage(movie.thumbnailURL)
+                    .resizable()
+                    .frame(width: proxy.size.width / 3)
+                    .padding(.leading, 3)
+                Text(movie.name)
+                Spacer()
+                
+                Button {
+                    // play movie
+                    print("asdfasdfasd")
+                } label: {
+                    Image(systemName: "arrowtriangle.right.fill")
+                }
+                .padding(.trailing, 20)
+            }
+            .foregroundStyle(.white)
+            .onTapGesture {
+                // show movie detail
+                movieDetailToShow = movie
+            }
+        }
     }
 }
 
 #Preview {
-    SearchPopularMoviesView()
+    ZStack {
+        Color.black
+            .ignoresSafeArea()
+        SearchPopularMoviesView(movie: exampleMovie5, movieDetailToShow: .constant(nil))
+            .frame(height: 75)
+    }
+    .foregroundStyle(.white)
 }

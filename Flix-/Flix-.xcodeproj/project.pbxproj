@@ -59,6 +59,9 @@
 		BA7BE1912B17C55A0077B608 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE1902B17C55A0077B608 /* VideoPlayerView.swift */; };
 		BA7BE1932B17C7DC0077B608 /* VideoPreviewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE1922B17C7DC0077B608 /* VideoPreviewImage.swift */; };
 		BA7BE1952B17D5180077B608 /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE1942B17D5180077B608 /* EpisodesView.swift */; };
+		BA9D82972B2BA82E00680634 /* ComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D82962B2BA82E00680634 /* ComingSoonView.swift */; };
+		BA9D82992B2BA89A00680634 /* NotificationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D82982B2BA89A00680634 /* NotificationBar.swift */; };
+		BA9D829B2B2BAD7F00680634 /* ComingSoonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D829A2B2BAD7F00680634 /* ComingSoonRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +109,9 @@
 		BA7BE1902B17C55A0077B608 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		BA7BE1922B17C7DC0077B608 /* VideoPreviewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewImage.swift; sourceTree = "<group>"; };
 		BA7BE1942B17D5180077B608 /* EpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesView.swift; sourceTree = "<group>"; };
+		BA9D82962B2BA82E00680634 /* ComingSoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonView.swift; sourceTree = "<group>"; };
+		BA9D82982B2BA89A00680634 /* NotificationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBar.swift; sourceTree = "<group>"; };
+		BA9D829A2B2BAD7F00680634 /* ComingSoonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +239,7 @@
 		BA4F93582B0E57420017049C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BA9D82952B2BA81F00680634 /* ComingSoon */,
 				BA1CA5D62B227BE000759503 /* Search */,
 				BA7BE18F2B17C5440077B608 /* Player */,
 				BA7BE16C2B1549940077B608 /* MovieDetailView */,
@@ -319,6 +326,16 @@
 				BA7BE1902B17C55A0077B608 /* VideoPlayerView.swift */,
 			);
 			path = Player;
+			sourceTree = "<group>";
+		};
+		BA9D82952B2BA81F00680634 /* ComingSoon */ = {
+			isa = PBXGroup;
+			children = (
+				BA9D82962B2BA82E00680634 /* ComingSoonView.swift */,
+				BA9D82982B2BA89A00680634 /* NotificationBar.swift */,
+				BA9D829A2B2BAD7F00680634 /* ComingSoonRow.swift */,
+			);
+			path = ComingSoon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,15 +466,18 @@
 				BA1CA5D52B1F7B1700759503 /* HomeStack.swift in Sources */,
 				BA7BE1912B17C55A0077B608 /* VideoPlayerView.swift in Sources */,
 				BA7BE1882B17B3270077B608 /* MovieGridView.swift in Sources */,
+				BA9D829B2B2BAD7F00680634 /* ComingSoonRow.swift in Sources */,
 				BA01ECA02B14F87E00BD389D /* TopMoviePreview.swift in Sources */,
 				BA1CA5DA2B23869900759503 /* SearchViewModel.swift in Sources */,
 				BA7BE18A2B17C3420077B608 /* TrailersAndMoreView.swift in Sources */,
 				BA1CA5E92B277E9000759503 /* GenerateMovies.swift in Sources */,
 				BA7BE17E2B17A13C0077B608 /* CustomTabSwitcher.swift in Sources */,
+				BA9D82972B2BA82E00680634 /* ComingSoonView.swift in Sources */,
 				BA7BE1722B167D800077B608 /* Episode.swift in Sources */,
 				BA4F93622B0E59FE0017049C /* Movie.swift in Sources */,
 				BA01ECA72B1508D700BD389D /* SmallHorizontalButton.swift in Sources */,
 				BA1E43E62B0E499B00AAF8A4 /* Flix_App.swift in Sources */,
+				BA9D82992B2BA89A00680634 /* NotificationBar.swift in Sources */,
 				BA1CA5D82B23868A00759503 /* SearchView.swift in Sources */,
 				BA1CA5E12B23921600759503 /* ActivityIndicator.swift in Sources */,
 				BA7BE1782B167F490077B608 /* HDView.swift in Sources */,

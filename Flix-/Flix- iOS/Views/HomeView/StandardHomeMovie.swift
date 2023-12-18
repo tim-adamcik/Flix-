@@ -16,7 +16,7 @@ struct StandardHomeMovie: View {
         VStack {
             KFImage(movie.thumbnailURL)
                 .resizable()
-                .scaledToFill()
+                .scaledToFit()
             Text(movie.name)
                 .font(.subheadline.bold())
         }

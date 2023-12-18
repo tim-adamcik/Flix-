@@ -31,6 +31,9 @@ struct Movie: Identifiable {
     var episodes: [Episode]?
     var promotionalHeadline: String?
     
+    var previewImageName: String
+    var previewVideoURL: URL?
+    
     var numberOfSeasonsDisplay: String {
         if let num = numberOfSeasons {
             if num == 1 {

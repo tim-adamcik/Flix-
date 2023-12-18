@@ -44,7 +44,7 @@ let exampleMovie1 = Movie(
     creators: "Baran bo Odan, Jantje Fritoja",
     cast: "Louis Hoffman, Oliver Masucci, Jordis Triebel", 
     moreLikeThisMovies: [exampleMovie2,exampleMovie3,exampleMovie4,exampleMovie5,exampleMovie6,exampleMovie7,exampleMovie8,exampleMovie9], trailers: exampleTrailers,
-    episodes: exampleEpisodes.shuffled())
+    episodes: exampleEpisodes.shuffled(), previewImageName: "ozarkPreview", previewVideoURL: exampleVideoURL)
 let exampleMovie2 = Movie(
     name: "Community",
     thumbnailURL: URL(string: "https://picsum.photos/200/301")!,
@@ -55,7 +55,7 @@ let exampleMovie2 = Movie(
     creators: "Baran bo Odan, Jantje Fritoja",
     cast: "Louis Hoffman, Oliver Masucci, Jordis Triebel",
     moreLikeThisMovies: [],
-    trailers: exampleTrailers.shuffled(), promotionalHeadline: "Best New Show")
+    trailers: exampleTrailers.shuffled(), promotionalHeadline: "Best New Show", previewImageName: "travelersPreview", previewVideoURL: exampleVideoURL)
 let exampleMovie3 = Movie(
     name: "South Park",
     thumbnailURL: URL(string: "https://picsum.photos/200/302")!,
@@ -66,7 +66,7 @@ let exampleMovie3 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Fritoja",
     cast: "Louis Hoffman, Oliver Masucci, Jordis Triebel", 
-    moreLikeThisMovies: [], trailers: exampleTrailers.shuffled())
+    moreLikeThisMovies: [], trailers: exampleTrailers.shuffled(), previewImageName: "whiteLinesPreview", previewVideoURL: exampleVideoURL)
 let exampleMovie4 = Movie(
     name: "Annabel",
     thumbnailURL: URL(string: "https://picsum.photos/200/303")!,
@@ -77,7 +77,7 @@ let exampleMovie4 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Fritoja",
     cast: "Louis Hoffman, Oliver Masucci, Jordis Triebel", 
-    moreLikeThisMovies: [], trailers: exampleTrailers.shuffled())
+    moreLikeThisMovies: [], trailers: exampleTrailers.shuffled(), previewImageName: "darkPreview", previewVideoURL: exampleVideoURL)
 let exampleMovie5 = Movie(
     name: "After Life",
     thumbnailURL: URL(string: "https://picsum.photos/200/304")!,
@@ -89,7 +89,7 @@ let exampleMovie5 = Movie(
     creators: "Baran bo Odan, Jantje Fritoja",
     cast: "Louis Hoffman, Oliver Masucci, Jordis Triebel",
     moreLikeThisMovies: [exampleMovie2,exampleMovie3,exampleMovie4,exampleMovie6,exampleMovie7,exampleMovie8,exampleMovie9],
-    trailers: exampleTrailers.shuffled(), episodes: exampleEpisodes, promotionalHeadline: "New Episodes Coming Soon")
+    trailers: exampleTrailers.shuffled(), episodes: exampleEpisodes, promotionalHeadline: "New Episodes Coming Soon", previewImageName: "arrestedDevPreview", previewVideoURL: exampleVideoURL)
 let exampleMovie6 = Movie(
     name: "Hannibal",
     thumbnailURL: URL(string: "https://picsum.photos/200/305")!,
@@ -98,7 +98,7 @@ let exampleMovie6 = Movie(
     rating: "TV-MA",
     numberOfSeasons: 5, defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Fritoja", cast: "Louis Hoffman, Oliver Masucci, Jordis Triebel", 
-    moreLikeThisMovies: [], trailers: exampleTrailers.shuffled())
+    moreLikeThisMovies: [], trailers: exampleTrailers.shuffled(), previewImageName: "dirtyJohnPreview", previewVideoURL: exampleVideoURL)
 let exampleMovie7 = Movie(
     name: "Shark Tale",
     thumbnailURL: URL(string: "https://picsum.photos/200/306")!,
@@ -109,7 +109,7 @@ let exampleMovie7 = Movie(
     creators: "Baran bo Odan, Jantje Fritoja",
     cast: "Louis Hoffman, Oliver Masucci, Jordis Triebel",
     moreLikeThisMovies: [],
-    trailers: exampleTrailers.shuffled(), promotionalHeadline: "Watch Season 6 now")
+    trailers: exampleTrailers.shuffled(), promotionalHeadline: "Watch Season 6 now", previewImageName: "whiteLinesPreview", previewVideoURL: exampleVideoURL)
 let exampleMovie8 = Movie(
     name: "Jumanji",
     thumbnailURL: URL(string: "https://picsum.photos/200/307")!,
@@ -119,7 +119,7 @@ let exampleMovie8 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Fritoja",
     cast: "Louis Hoffman, Oliver Masucci, Jordis Triebel",
-    moreLikeThisMovies: [], trailers: exampleTrailers.shuffled())
+    moreLikeThisMovies: [], trailers: exampleTrailers.shuffled(), previewImageName: "darkPreview", previewVideoURL: exampleVideoURL)
 let exampleMovie9 = Movie(
     name: "Pets",
     thumbnailURL: URL(string: "https://picsum.photos/200/308")!,
@@ -130,7 +130,7 @@ let exampleMovie9 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Fritoja",
     cast: "Louis Hoffman, Oliver Masucci, Jordis Triebel",
-    moreLikeThisMovies: [], trailers: exampleTrailers.shuffled())
+    moreLikeThisMovies: [], trailers: exampleTrailers.shuffled(), previewImageName: "dirtyJohnPreview", previewVideoURL: exampleVideoURL)
 
 let exampleEpisodeInfo1 = CurrentEpisodeInfo(episodeName: "Happy", description: "This is the episode description for the show happy. Happy is a show that follows a man through the happiest times of his life. When things get rough for him he has to reflect on all of the positive past experiences he has had to move his life forward.", season: 1, episode: 1)
 

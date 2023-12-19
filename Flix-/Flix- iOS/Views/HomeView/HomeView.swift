@@ -46,7 +46,7 @@ struct HomeView: View {
                         .frame(width: screen.width)
                         .padding(.top, -100)
                         .zIndex(-1)
-                    
+                    MoviePreviewRow(movies: exampleMovies)
                     HomeStack(vm: vm, movieDetailToShow: $movieDetailToShow, homeGenre: homeGenre, topRowSelection: topRowSelection, selectedGenre: homeGenre)
                 }
             }

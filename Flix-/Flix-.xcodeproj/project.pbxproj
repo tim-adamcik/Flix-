@@ -64,6 +64,7 @@
 		BA90FD1F2B30C3DA008902C7 /* MoviePreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FD1E2B30C3DA008902C7 /* MoviePreviewCell.swift */; };
 		BA90FD212B30D2B0008902C7 /* MoviePreviewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FD202B30D2B0008902C7 /* MoviePreviewRow.swift */; };
 		BA90FD232B31F10E008902C7 /* PagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FD222B31F10E008902C7 /* PagerView.swift */; };
+		BA90FD262B3201BC008902C7 /* VideoPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = BA90FD252B3201BC008902C7 /* VideoPlayer */; };
 		BA9D82972B2BA82E00680634 /* ComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D82962B2BA82E00680634 /* ComingSoonView.swift */; };
 		BA9D82992B2BA89A00680634 /* NotificationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D82982B2BA89A00680634 /* NotificationBar.swift */; };
 		BA9D829B2B2BAD7F00680634 /* ComingSoonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D829A2B2BAD7F00680634 /* ComingSoonRow.swift */; };
@@ -134,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA4F935F2B0E597B0017049C /* KingfisherSwiftUI in Frameworks */,
+				BA90FD262B3201BC008902C7 /* VideoPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +403,7 @@
 			name = "Flix-";
 			packageProductDependencies = (
 				BA4F935E2B0E597B0017049C /* KingfisherSwiftUI */,
+				BA90FD252B3201BC008902C7 /* VideoPlayer */,
 			);
 			productName = "Flix-";
 			productReference = BA1E43E22B0E499B00AAF8A4 /* Flix-.app */;
@@ -452,6 +455,7 @@
 			mainGroup = BA1E43D92B0E499B00AAF8A4;
 			packageReferences = (
 				BA4F935D2B0E597B0017049C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				BA90FD242B3201BB008902C7 /* XCRemoteSwiftPackageReference "videoplayer" */,
 			);
 			productRefGroup = BA1E43E32B0E499B00AAF8A4 /* Products */;
 			projectDirPath = "";
@@ -833,6 +837,14 @@
 				version = 5.14.1;
 			};
 		};
+		BA90FD242B3201BB008902C7 /* XCRemoteSwiftPackageReference "videoplayer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wxxsw/videoplayer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -840,6 +852,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BA4F935D2B0E597B0017049C /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = KingfisherSwiftUI;
+		};
+		BA90FD252B3201BC008902C7 /* VideoPlayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA90FD242B3201BB008902C7 /* XCRemoteSwiftPackageReference "videoplayer" */;
+			productName = VideoPlayer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -18,6 +18,9 @@ struct HomeView: View {
     @State private var showTopRowSelection = false
     @State private var showGenreSelection: Bool = false
     
+    @Binding private var showPreviewFullScreen: Bool
+    @Binding private var previewStartingIndex: Int
+    
     
     private var screen: CGRect {
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
@@ -26,8 +29,10 @@ struct HomeView: View {
         return windowScene.screen.bounds
         }
     
-    init(vm: HomeViewModel = HomeViewModel()) {
+    init(vm: HomeViewModel = HomeViewModel(), showPreviewFullScreen: Binding<Bool>, previewStartingIndex: Binding<Int>) {
         self.vm = vm
+        self._showPreviewFullScreen = showPreviewFullScreen
+        self._previewStartingIndex = previewStartingIndex
     }
     
     var body: some View {
@@ -46,6 +51,8 @@ struct HomeView: View {
                         .frame(width: screen.width)
                         .padding(.top, -100)
                         .zIndex(-1)
+                    
+                    MoviePreviewRow(movies: exampleMovies, showPreviewFullScreen: $showPreviewFullScreen, previewStartingIndex: $previewStartingIndex)
                     
                     HomeStack(vm: vm, movieDetailToShow: $movieDetailToShow, homeGenre: homeGenre, topRowSelection: topRowSelection, selectedGenre: homeGenre)
                 }
@@ -132,7 +139,7 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(showPreviewFullScreen: .constant(false), previewStartingIndex: .constant(0))
 }
 
 enum HomeTopRow: String, CaseIterable {

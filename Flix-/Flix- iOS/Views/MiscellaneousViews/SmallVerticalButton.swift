@@ -13,10 +13,7 @@ struct SmallVerticalButton: View {
     var onImage: String
     var offImage: String
     var isOn: Bool
-    
-    
-    
-    
+    var color: Color = .white
     
     var action: () -> Void
     
@@ -29,7 +26,7 @@ struct SmallVerticalButton: View {
                 Image(systemName: isOn ? onImage : offImage)
                 Text(text)
             }
-            .foregroundStyle(.white)
+            .foregroundStyle(color)
             .font(.system(size: 14))
             .bold()
         }

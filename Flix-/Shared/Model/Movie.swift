@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Movie: Identifiable {
     var id: String = UUID().uuidString
@@ -21,6 +22,7 @@ struct Movie: Identifiable {
     
     // Personalization
     var currentEpisode: CurrentEpisodeInfo?
+    var accentColor: Color = .white
     var defaultEpisodeInfo: CurrentEpisodeInfo
     var creators: String
     var cast: String
